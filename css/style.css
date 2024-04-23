@@ -1,0 +1,83 @@
+html, body {
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  background-color: #1f1f1f;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+.header {
+  padding-top: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  outline: 2px solid #bebebe;
+  text-align: center;
+}
+.container > h1 {
+  font-size: 48px;
+  color: #eeeeee;
+  text-transform: uppercase;
+  line-height: 1.5;
+  padding: 10px;
+}
+.container > h1 span {
+  color: #000;
+  background-color: rgb(255, 0, 200);
+  padding: 5px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+table {
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 24px;
+  outline: 2px solid #bebebe;
+  color: #fff;
+}
+table th {
+  padding: 20px;
+  border-bottom: 2px solid red;
+}
+table td {
+  padding: 10px 80px;
+  border-bottom: 2px solid red;
+}
+table td.fix {
+  max-width: 400px;
+}
+table td.info {
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 60px;
+  }
+  .container h1 {
+    font-size: 36px;
+  }
+  table {
+    font-size: 16px;
+  }
+  table th {
+    padding: 10px;
+  }
+  table td {
+    padding: 10px 20px;
+  }
+}

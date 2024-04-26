@@ -7,6 +7,54 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.layout {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: layout-hide 1s 2.1s both;
+}
+.layout__text {
+  text-align: center;
+  color: #fff;
+  font-size: 64px;
+  animation: logomove 3s both;
+  text-shadow: 0 0 30px #ff009d;
+}
+
+@keyframes logomove {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+@keyframes layout-hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;

@@ -1,0 +1,222 @@
+html,
+body {
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    background-color: #1f1f1f;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: layout-hide 1s 2.1s both;
+    cursor: none;
+
+    &__text {
+        text-align: center;
+        color: #fff;
+        font-size: 64px;
+        animation: logomove 3s both;
+        text-shadow: 0 0 30px #ff009d;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+}
+
+.header {
+    padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    outline: 2px solid #bebebe;
+    text-align: center;
+
+    &>h1 {
+        font-size: 48px;
+        color: #eeeeee;
+        text-transform: uppercase;
+        line-height: 1.5;
+        padding: 10px;
+
+        & span {
+            color: #000;
+            padding: 5px;
+            animation: headline-shadow 4s infinite;
+        }
+
+    }
+}
+
+.content {
+    margin-top: 40px;
+}
+
+table {
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 24px;
+    outline: 2px solid #bebebe;
+    color: #fff;
+    & tr {
+        cursor: default;
+        box-shadow: 0;
+        transition: box-shadow 0.3s ease-out;
+        border-radius: 5px;
+        &:hover {
+            box-shadow: 0 0 10px #fff;
+        }
+    }
+    & .table_header {
+        pointer-events: none;
+    }
+    & th {
+        padding: 20px;
+        border-bottom: 2px solid #616161;
+        text-transform: uppercase;
+    }
+
+    & td {
+        padding: 10px 80px;
+        border-bottom: 2px solid #616161;
+
+        &.fix {
+            max-width: 400px;
+        }
+
+        &.info {
+            max-width: 200px;
+        }
+    }
+}
+.copy {
+    text-align: center;
+    color: #fff;
+}
+.code {
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .header {
+        padding-top: 60px;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    table {
+        font-size: 16px;
+
+        & th {
+            padding: 10px;
+        }
+
+        & td {
+            padding: 10px 20px;
+        }
+    }
+}
+
+
+.shows {
+    animation: showsvisible 0s 2.4s both;
+}
+
+@keyframes showsvisible {
+    0% {
+        display: none;
+        visibility: hidden;
+    }
+
+    99% {
+        display: none;
+        visibility: hidden;
+    }
+
+    100% {
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+//animations
+@keyframes headline-shadow {
+    0% {
+        text-shadow: 0 0 20px #ff009d;
+    }
+
+    50% {
+        text-shadow: 0 0 40px #ff009d;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ff009d;
+    }
+}
+
+@keyframes logomove {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+@keyframes layout-hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* show when scroll */
+.element-animation {
+    opacity: 0;
+
+    &.element-show {
+        opacity: 1;
+        transition: opacity 1s, transform 1s;
+    }
+}
+.table_margin {
+    margin-top: 50px;
+}

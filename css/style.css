@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100%;
   min-width: 400px;
   height: 100%;
@@ -19,6 +20,7 @@ html, body {
   justify-content: center;
   align-items: center;
   animation: layout-hide 1s 2.1s both;
+  cursor: none;
 }
 .layout__text {
   text-align: center;
@@ -26,8 +28,137 @@ html, body {
   font-size: 64px;
   animation: logomove 3s both;
   text-shadow: 0 0 30px #ff009d;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+.header {
+  padding-top: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  outline: 2px solid #bebebe;
+  text-align: center;
+}
+.container > h1 {
+  font-size: 48px;
+  color: #eeeeee;
+  text-transform: uppercase;
+  line-height: 1.5;
+  padding: 10px;
+}
+.container > h1 span {
+  color: #000;
+  padding: 5px;
+  animation: headline-shadow 4s infinite;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+table {
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 24px;
+  outline: 2px solid #bebebe;
+  color: #fff;
+}
+table tr {
+  cursor: default;
+  box-shadow: 0;
+  transition: box-shadow 0.3s ease-out;
+  border-radius: 5px;
+}
+table tr:hover {
+  box-shadow: 0 0 10px #fff;
+}
+table .table_header {
+  pointer-events: none;
+}
+table th {
+  padding: 20px;
+  border-bottom: 2px solid #616161;
+  text-transform: uppercase;
+}
+table td {
+  padding: 10px 80px;
+  border-bottom: 2px solid #616161;
+}
+table td.fix {
+  max-width: 400px;
+}
+table td.info {
+  max-width: 200px;
+}
+
+.copy {
+  text-align: center;
+  color: #fff;
+}
+
+.code {
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 60px;
+  }
+  .container h1 {
+    font-size: 36px;
+  }
+  table {
+    font-size: 16px;
+  }
+  table th {
+    padding: 10px;
+  }
+  table td {
+    padding: 10px 20px;
+  }
+}
+.shows {
+  animation: showsvisible 0s 2.4s both;
+}
+
+@keyframes showsvisible {
+  0% {
+    display: none;
+    visibility: hidden;
+  }
+  99% {
+    display: none;
+    visibility: hidden;
+  }
+  100% {
+    display: block;
+    visibility: visible;
+  }
+}
+@keyframes headline-shadow {
+  0% {
+    text-shadow: 0 0 20px #ff009d;
+  }
+  50% {
+    text-shadow: 0 0 40px #ff009d;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff009d;
+  }
+}
 @keyframes logomove {
   0% {
     transform: translateY(50px);
@@ -55,77 +186,15 @@ html, body {
     pointer-events: none;
   }
 }
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px 0 10px;
+/* show when scroll */
+.element-animation {
+  opacity: 0;
+}
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
 }
 
-.header {
-  padding-top: 100px;
-}
-
-.container {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  outline: 2px solid #bebebe;
-  text-align: center;
-}
-.container > h1 {
-  font-size: 48px;
-  color: #eeeeee;
-  text-transform: uppercase;
-  line-height: 1.5;
-  padding: 10px;
-}
-.container > h1 span {
-  color: #000;
-  background-color: rgb(255, 0, 200);
-  padding: 5px;
-}
-
-.content {
-  margin-top: 40px;
-}
-
-table {
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  font-size: 24px;
-  outline: 2px solid #bebebe;
-  color: #fff;
-}
-table th {
-  padding: 20px;
-  border-bottom: 2px solid red;
-}
-table td {
-  padding: 10px 80px;
-  border-bottom: 2px solid red;
-}
-table td.fix {
-  max-width: 400px;
-}
-table td.info {
-  max-width: 200px;
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding-top: 60px;
-  }
-  .container h1 {
-    font-size: 36px;
-  }
-  table {
-    font-size: 16px;
-  }
-  table th {
-    padding: 10px;
-  }
-  table td {
-    padding: 10px 20px;
-  }
+.table_margin {
+  margin-top: 50px;
 }

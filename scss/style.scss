@@ -141,6 +141,9 @@ table {
 .shows {
     animation: showsvisible 0s 2.4s both;
 }
+.april {
+    border-bottom: 2px solid red;
+}
 
 @keyframes showsvisible {
     0% {

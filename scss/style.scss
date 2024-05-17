@@ -141,8 +141,11 @@ table {
 .shows {
     animation: showsvisible 0s 2.4s both;
 }
-.april {
+.nopay {
     border-bottom: 2px solid red;
+}
+.payday {
+    border-bottom: 2px solid green;
 }
 
 @keyframes showsvisible {

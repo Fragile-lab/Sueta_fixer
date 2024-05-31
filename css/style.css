@@ -41,7 +41,7 @@ body {
 }
 
 .header {
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 .container {
@@ -119,6 +119,10 @@ table td.fix {
 }
 table td.info {
   max-width: 200px;
+}
+
+.footer {
+  padding: 20px 0;
 }
 
 .copy {
